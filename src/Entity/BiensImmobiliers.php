@@ -36,7 +36,7 @@ class BiensImmobiliers
 
     #[ORM\Column(type: Types::DATE_IMMUTABLE)]
     private ?\DateTimeImmutable $date_ajout = null;
-
+    
     #[ORM\ManyToOne(inversedBy: 'biensImmobiliers')]
     #[ORM\JoinColumn(nullable: false)]
     private ?Categories $type = null;
@@ -55,7 +55,7 @@ class BiensImmobiliers
         $this->images = new ArrayCollection();
         $this->favoris = new ArrayCollection();
     }
-
+    
     public function getId(): ?int
     {
         return $this->id;
