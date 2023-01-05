@@ -18,7 +18,7 @@ class Favoris
     private ?\DateTimeImmutable $date = null;
 
     #[ORM\ManyToOne(inversedBy: 'favoris')]
-    #[ORM\JoinColumn(nullable: false)]
+    #[ORM\JoinColumn(nullable: false,onDelete:'CASCADE')]
     private ?BiensImmobiliers $biens = null;
 
     public function getId(): ?int

@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use App\Entity\Trait\SlugTrait;
 use App\Repository\BiensImmobiliersRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
@@ -11,6 +12,7 @@ use Doctrine\ORM\Mapping as ORM;
 #[ORM\Entity(repositoryClass: BiensImmobiliersRepository::class)]
 class BiensImmobiliers
 {
+    use SlugTrait;
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
@@ -38,7 +40,7 @@ class BiensImmobiliers
     private ?\DateTimeImmutable $date_ajout = null;
     
     #[ORM\ManyToOne(inversedBy: 'biensImmobiliers')]
-    #[ORM\JoinColumn(nullable: false)]
+    #[ORM\JoinColumn(nullable: false,onDelete:'CASCADE')]
     private ?Categories $type = null;
 
     #[ORM\Column(length: 200)]
@@ -54,6 +56,7 @@ class BiensImmobiliers
     {
         $this->images = new ArrayCollection();
         $this->favoris = new ArrayCollection();
+        $this->date_ajout= new \DateTimeImmutable();
     }
     
     public function getId(): ?int
