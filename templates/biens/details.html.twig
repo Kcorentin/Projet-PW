@@ -1,0 +1,74 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Détails de
+	{{biens.titre}}
+{% endblock %}
+
+{% block body %}
+
+
+	<main class="container">
+		<section class="row">
+			<div class="col-12">
+				<h1>{{biens.titre}}</h1>
+			</div>
+			<div class="col-6">
+				<div id="carouselExampleIndicators" class="carousel slide">
+					<div class="carousel-indicators">
+						{% for iteration in 1..biens.images|length %}
+							<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{ iteration - 1 }}" {{ (loop.first ) ?'class="active" aria-current="true"' : '' }} aria-label="Slide {{ iteration }}"></button>
+						{% endfor %}
+					</div>
+					<div class="carousel-inner">
+						{% for image in biens.images %}
+							<div class="carousel-item active {{ (loop.first ) ? 'active' : '' }}">
+								<img src="{{ asset('assets/uploads/') ~ image.name}}" class="d-block w-100" alt="biens.name">
+							</div>
+						{% endfor %}
+
+					</div>
+					<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Précédent</span>
+					</button>
+					<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Suivant</span>
+					</button>
+				</div>
+			</div>
+			<div class="col-6">
+				<div class="card h-100">
+					<div class="card-body">
+						<ul>
+							<p>Catégorie :
+								{{biens.type.name}}
+							</p>
+							<p>Le bien est en
+								{{biens.VentesOuLocations}}
+							</p>
+							<p>Prix :
+								{{biens.prix}}
+								€</p>
+							<p>Surface :
+								{{biens.surface}}
+							</p>
+							<p>Ville :
+								{{biens.prix}},
+								{{biens.codepostal}}
+							</p>
+							<p>Description :
+								{{biens.description}}
+							</p>
+							 <a href="" class="btn btn-success">Ajouter au favoris</a>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+
+		</section>
+	</main>
+
+
+{% endblock %}

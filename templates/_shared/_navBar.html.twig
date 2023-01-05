@@ -1,41 +1,22 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
 	<div class="container-fluid">
-		<a class="navbar-brand" href="#">SAFER</a>
+		<a class="navbar-brand" href="{{path('main')}}">SAFER</a>
 		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 				<li class="nav-item">
-					<a class="nav-link active" aria-current="page" href="/">Accueil</a>
-				</li>
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-						Catégories
-					</a>
-					<ul class="dropdown-menu">
-						<li>
-							<a class="dropdown-item" href="#">Terrain Agricole</a>
-						</li>
-						<li>
-							<a class="dropdown-item" href="#">Prairie</a>
-						</li>
-						<li>
-							<a class="dropdown-item" href="#">Bois</a>
-						</li>
-						<li>
-							<a class="dropdown-item" href="#">Bâtiments</a>
-						</li>
-						<li>
-							<a class="dropdown-item" href="#">Exploitations</a>
-						</li>
-					</ul>
+					<a class="nav-link active" aria-current="page" href="{{path('main')}}">Accueil</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link active" href="#">Favoris</a>
+					<a class="nav-link active" aria-current="page" href="{{path('categories_index')}}">Categories</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link active" href="#">Contacts</a>
+					<a class="nav-link active" href="{{path('favoris_index')}}">Favoris</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="{{path('contacts_index')}}">Contacts</a>
 				</li>
 
 			</ul>

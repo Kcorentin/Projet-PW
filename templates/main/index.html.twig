@@ -2,24 +2,34 @@
 
 
 {% block body %}
-	<div class="row">
-		<section class="col">
-		
-		<img src="https://picsum.photos/200/400" class="img-fluid" alt="" />
-		</section>
-		<section class="col">
-		
-		<img src="https://picsum.photos/200/400" class="img-fluid" alt="" />
-		</section>
-		<section class ="col">
-		
-		<img src="https://picsum.photos/200/400" class="img-fluid" alt="" />
-		</section>
-	</div>
-	<p> Presentation SAFER
+	<main class="container">
+		<section class="row">
+			<div class="col-12">
+				<div class="row">
+					<section class="col">
 
-	</p>
+						<img src="{{ asset('assets/uploads/19.07.118.jpg') }}" class="img-fluid" alt=""/>
+						<p>Titre,prix,ville</p>
+					</section>
+					<section class="col">
+
+						<img src="https://picsum.photos/200/400" class="img-fluid" alt=""/>
+						<p>Titre,prix,ville</p>
+					</section>
+					<section class="col">
+
+						<img src="https://picsum.photos/200/400" class="img-fluid" alt=""/>
+						<p>Titre,prix,ville</p>
+					</section>
+				</div>
+				<p>
+				
+					Presentation SAFER
+				
+				</p>
+			</div>
+		</section>
+	</main>
 
 
-			
 {% endblock %}
