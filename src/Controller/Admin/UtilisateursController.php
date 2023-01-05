@@ -15,4 +15,10 @@ class UtilisateursController extends AbstractController
     {
         return $this->render('admin/utilisateurs/index.html.twig');
     }
+
+    #[Route ('/admin',name:'admin')]
+    public function compteAdmin(): Response
+    {
+        return $this->render('admin/utilisateurs/admin.html.twig');
+    }
 }

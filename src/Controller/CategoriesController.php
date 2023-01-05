@@ -22,8 +22,6 @@ class CategoriesController extends AbstractController
     #[Route('/{slug}', name: 'list')]
     public function list(Categories $categorie): Response
     {
-        //On va chercher le numéro de page dans l'url
-  
 
         //On va chercher la liste des produits de la catégorie
         $biens = $categorie->getBiensImmobiliers();

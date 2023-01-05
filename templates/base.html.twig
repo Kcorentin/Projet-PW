@@ -3,7 +3,9 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>
-			{% block title %}Accueil{% endblock %} - Site SAFER
+			{% block title %}Accueil
+			{% endblock %}
+			- Site SAFER
 		</title>
 		<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -19,7 +21,7 @@
 	</head>
 	<body>
 		{% include "_shared/_navBar.html.twig" %}
-
+		{% include "_shared/_flash.html.twig" %}
 		{% block body %}{% endblock %}
 
 		{% include "_shared/_footer.html.twig" %}

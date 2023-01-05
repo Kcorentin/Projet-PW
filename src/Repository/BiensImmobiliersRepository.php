@@ -3,7 +3,9 @@
 namespace App\Repository;
 
 use App\Entity\BiensImmobiliers;
+use App\Repository\CategoriesRepository;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
@@ -39,6 +41,8 @@ class BiensImmobiliersRepository extends ServiceEntityRepository
         }
     }
 
+
+    
 //    /**
 //     * @return BiensImmobiliers[] Returns an array of BiensImmobiliers objects
 //     */
