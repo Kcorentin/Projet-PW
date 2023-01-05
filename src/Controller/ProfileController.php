@@ -23,11 +23,5 @@ class ProfileController extends AbstractController
             'controller_name' => 'Favoris de l\'utilisateurs',
         ]);
     }
-    #[Route('/annonces', name: 'annonces')]
-    public function annonces(): Response
-    {
-        return $this->render('profile/index.html.twig', [
-            'controller_name' => 'Annonces de l\'utilisateurs',
-        ]);
-    }
+   
 }
