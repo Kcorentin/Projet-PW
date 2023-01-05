@@ -8,5 +8,5 @@
     {{form_row(biensForm.codepostal)}}
     {{form_row(biensForm.description)}}
   
-   <center> <button type="submit" class="btn btn-success "> Ajouter</button></center>
+   <center> <button type="submit" class="btn btn-success">{{ button_label|default('Ajouter') }}</button></center>
 {{form_end(biensForm)}}
