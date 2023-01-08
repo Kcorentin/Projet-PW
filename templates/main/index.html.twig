@@ -5,71 +5,99 @@
 	<div class="content-area home-area-1 recent-property" style="background-color: #FCFCFC; padding-bottom: 55px;">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-10 col-md-offset-1 col-sm-12 text-center page-title">
+				<div
+					class="col-md-10 col-md-offset-1 col-sm-12 text-center page-title">
 					<!-- /.feature title -->
-					<h2>Top submitted property</h2>
-					<p>Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium. Nullam sed arcu ultricies . </p>
+					<h2>Biens disponibles sur le site :
+
+					</h2>
+
 				</div>
 			</div>
 
 			<div class="row">
 				<div class="proerty-th">
-					<div class="col-sm-6 col-md-4 p0">
-						<div class="box-two proerty-item">
-							<div class="item-thumb">
-								<a href="property-1.html"><img src="assets/img/demo/property-1.jpg"></a>
-							</div>
-							<div class="item-entry overflow">
-								<h5><a href="property-1.html">Super nice villa </a></h5>
-								<div class="dot-hr"></div>
-								<span class="pull-left"><b>Area :</b> 120m </span>
-								<span class="proerty-price pull-right">$ 300,000</span>
-							</div>
-						</div>
-					</div>
+					{% for image in biens[r1].images %}
+						<img src="{{ asset('assets/uploads/') ~ image.name}}" class="img-fluid" alt="biens.name">
+					{% endfor %}
 
-					<div class="col-sm-6 col-md-4 p0">
-						<div class="box-two proerty-item">
-							<div class="item-thumb">
-								<a href="property-2.html"><img src="assets/img/demo/property-2.jpg"></a>
-							</div>
-							<div class="item-entry overflow">
-								<h5><a href="property-2.html">Super nice villa </a></h5>
-								<div class="dot-hr"></div>
-								<span class="pull-left"><b>Area :</b> 120m </span>
-								<span class="proerty-price pull-right">$ 300,000</span>
-							</div>
-						</div>
-					</div>
+				</div>
+				<div class="item-entry overflow">
+					<h5>
+						<a href="property-1.html">{{biens[r1].titre}}</a>
+					</h5>
+					<div class="dot-hr"></div>
 
-					<div class="col-sm-6 col-md-4 p0">
-						<div class="box-two proerty-item">
-							<div class="item-thumb">
-								<a href="property-3.html"><img src="assets/img/demo/property-3.jpg"></a>
-
-							</div>
-							<div class="item-entry overflow">
-								<h5><a href="property-3.html">Super nice villa </a></h5>
-								<div class="dot-hr"></div>
-								<span class="pull-left"><b>Area :</b> 120m </span>
-								<span class="proerty-price pull-right">$ 300,000</span>
-							</div>
-						</div>
-					</div>
-					<div class="box-tree more-proerty text-center col-sm-6 col-md-12 p0 ">
-						<div class="item-tree-icon">
-							<i class="fa fa-th"></i>
-						</div>
-						<div class="more-entry overflow">
-							<h5><a href="property-1.html">CAN'T DECIDE ? </a></h5>
-							<h5 class="tree-sub-ttl">Show all properties</h5>
-							<button class="btn border-btn more-black" value="All properties">All properties</button>
-						</div>
-					</div>
-
-
+					<span class="pull-left">
+						<b>Surface :</b>
+						{{biens[r1].surface}}</span>
+					<span class="proerty-price pull-right">
+						<b>Prix :</b>
+						{{biens[r1].prix}}</span>
 				</div>
 			</div>
 		</div>
+
+		<div class="col-sm-6 col-md-4 p0">
+			<div class="box-two proerty-item">
+				<div class="item-thumb">
+					{% for image in biens[r2].images %}
+						<img src="{{ asset('assets/uploads/') ~ image.name}}" class="img-fluid" alt="biens.name">
+					{% endfor %}
+				</div>
+				<div class="item-entry overflow">
+					<h5>
+						<a href="property-1.html">{{biens[r2].titre}}</a>
+					</h5>
+					<div class="dot-hr"></div>
+
+					<span class="pull-left">
+						<b>Surface :</b>
+						{{biens[r2].surface}}</span>
+					<span class="proerty-price pull-right">
+						<b>Prix :</b>
+						{{biens[r2].prix}}</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-sm-6 col-md-4 p0">
+			<div class="box-two proerty-item">
+				<div class="item-thumb">
+					{% for image in biens[r3].images %}
+						<img src="{{ asset('assets/uploads/') ~ image.name}}" class="img-fluid" alt="biens.name">
+					{% endfor %}
+
+				</div>
+				<div class="item-entry overflow">
+					<h5>
+						<a href="property-1.html">{{biens[r3].titre}}</a>
+					</h5>
+					<div class="dot-hr"></div>
+
+					<span class="pull-left">
+						<b>Surface :</b>
+						{{biens[r3].surface}}</span>
+					<span class="proerty-price pull-right">
+						<b>Prix :</b>
+						{{biens[r3].prix}}</span>
+				</div>
+			</div>
+		</div>
+		<div class="box-tree more-proerty text-center col-sm-6 col-md-12 p0 ">
+			<div class="item-tree-icon">
+				<i class="fa fa-th"></i>
+			</div>
+			<div class="more-entry overflow">
+				<h5>
+					<a href="property-1.html">A propos
+					</a>
+				</h5>
+				<h5 class="tree-sub-ttl"></h5>
+				<button class="btn border-btn more-black" value="All properties">All properties</button>
+			</div>
+		</div>
+
+
 	</div>
-{% endblock %}
+</div></div></div>{% endblock %}
