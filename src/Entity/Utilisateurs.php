@@ -39,8 +39,6 @@ class Utilisateurs implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(length: 200, unique: true)]
     private ?string $login = null;
 
-    #[ORM\Column(type: Types::DATE_IMMUTABLE)]
-    private ?\DateTimeImmutable $date_creation=null;
 
     public function __construct(){
         $this->date_creation = new \DateTimeImmutable();
