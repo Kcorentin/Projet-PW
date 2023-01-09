@@ -25,7 +25,10 @@ class MainController extends AbstractController
         ->getQuery();
         $randombien = $query->getResult();
             
-    
+
+
+
+
        
         $random1= rand(0,count($randombien)-1);
         $random2= rand(0,count($randombien)-1);

@@ -9,95 +9,101 @@
 					class="col-md-10 col-md-offset-1 col-sm-12 text-center page-title">
 					<!-- /.feature title -->
 					<h2>Biens disponibles sur le site :
-
 					</h2>
 
 				</div>
 			</div>
+			<div class="col-sm-6 col-md-4 p2">
+				<div class="box-two proerty-item">
+					<div class="item-thumb">
+						{% for image in biens[r1].images %}
+							<img src="{{ asset('assets/uploads/') ~ image.name}}" class="img-fluid" alt="biens.name" width="400" height="200px">
+						{% endfor %}
 
-			<div class="row">
-				<div class="proerty-th">
-					{% for image in biens[r1].images %}
-						<img src="{{ asset('assets/uploads/') ~ image.name}}" class="img-fluid" alt="biens.name">
-					{% endfor %}
+					</div>
+					<div class="item-entry overflow">
+						<h5>
+							<a href="biens/{{biens[r1].slug}}">
+								{{biens[r1].titre}}</a>
+						</h5>
+						<div class="dot-hr"></div>
 
+						<span class="pull-left">
+							<b>Surface :</b>
+							{{biens[r1].surface}}</span>
+						<span class="proerty-price pull-right">
+							<b>Prix :</b>
+							{{biens[r1].prix}} €</span>
+					</div>
 				</div>
-				<div class="item-entry overflow">
+			</div>
+
+			<div class="col-sm-6 col-md-4 p2">
+				<div class="box-two proerty-item">
+					<div class="item-thumb">
+						{% for image in biens[r2].images %}
+							<img src="{{ asset('assets/uploads/') ~ image.name}}" class="img-fluid" alt="biens.name" width="400" height="200px">
+						{% endfor %}
+					</div>
+					<div class="item-entry overflow">
+						<h5>
+							<a href="biens/{{biens[r2].slug}}">{{biens[r2].titre}}</a>
+						</h5>
+						<div class="dot-hr"></div>
+
+						<span class="pull-left">
+							<b>Surface :</b>
+							{{biens[r2].surface}}</span>
+						<span class="proerty-price pull-right">
+							<b>Prix :</b>
+							{{biens[r2].prix}} €</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-sm-6 col-md-4 p2">
+				<div class="box-two proerty-item">
+					<div class="item-thumb">
+						{% for image in biens[r3].images %}
+							<img src="{{ asset('assets/uploads/') ~ image.name}}" class="img-fluid" alt="biens.name" width="400" height="200px">
+						{% endfor %}
+
+					</div>
+					<div class="item-entry overflow">
+						<h5>
+							<a href="biens/{{biens[r3].slug}}">{{biens[r3].titre}}</a>
+						</h5>
+						<div class="dot-hr"></div>
+
+						<span class="pull-left">
+							<b>Surface :</b>
+							{{biens[r3].surface}}</span>
+						<span class="proerty-price pull-right">
+							<b>Prix :</b>
+							{{biens[r3].prix}} €</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="box-tree more-proerty text-center col-sm-0 col-md-12 p2">
+				<div class="more-entry overflow">
 					<h5>
-						<a href="property-1.html">{{biens[r1].titre}}</a>
+						<a topmargin="4">
+							<h4>A propos de Safer :</h4>
+						</a>
+
+						<p>Une Safer (Société d’aménagement foncier et d’établissement rural) est une société anonyme, sans but lucratif (sans distribution de bénéfices), avec des missions d’intérêt général, sous tutelle des ministères de l’Agriculture et des Finances. Les Safer couvrent le territoire français métropolitain et 3 DOM. Issues des lois d’orientation agricole de 1960 et 1962, les Safer ont aujourd’hui plus de cinquante ans d’expérience sur le terrain.
+																			Leurs actions relèvent des tribunaux judiciaires (tribunaux de grandes instances, cours d’appel et Cour de cassation).
+																			
+																			Les Sociétés d’aménagement foncier et d’établissement rural (Safer) permettent à tout porteur de projet viable – qu’il soit agricole, artisanal, de service, résidentiel ou environnemental – de s’installer en milieu rural. Les projets doivent être en cohérence avec les politiques locales et répondre à l’intérêt général.
+						</p>
 					</h5>
-					<div class="dot-hr"></div>
-
-					<span class="pull-left">
-						<b>Surface :</b>
-						{{biens[r1].surface}}</span>
-					<span class="proerty-price pull-right">
-						<b>Prix :</b>
-						{{biens[r1].prix}}</span>
+					<h5 class="tree-sub-ttl"></h5>
+					<button class="btn border-btn more-black" value="All properties">All properties</button>
 				</div>
 			</div>
+
+
 		</div>
-
-		<div class="col-sm-6 col-md-4 p0">
-			<div class="box-two proerty-item">
-				<div class="item-thumb">
-					{% for image in biens[r2].images %}
-						<img src="{{ asset('assets/uploads/') ~ image.name}}" class="img-fluid" alt="biens.name">
-					{% endfor %}
-				</div>
-				<div class="item-entry overflow">
-					<h5>
-						<a href="property-1.html">{{biens[r2].titre}}</a>
-					</h5>
-					<div class="dot-hr"></div>
-
-					<span class="pull-left">
-						<b>Surface :</b>
-						{{biens[r2].surface}}</span>
-					<span class="proerty-price pull-right">
-						<b>Prix :</b>
-						{{biens[r2].prix}}</span>
-				</div>
-			</div>
-		</div>
-
-		<div class="col-sm-6 col-md-4 p0">
-			<div class="box-two proerty-item">
-				<div class="item-thumb">
-					{% for image in biens[r3].images %}
-						<img src="{{ asset('assets/uploads/') ~ image.name}}" class="img-fluid" alt="biens.name">
-					{% endfor %}
-
-				</div>
-				<div class="item-entry overflow">
-					<h5>
-						<a href="property-1.html">{{biens[r3].titre}}</a>
-					</h5>
-					<div class="dot-hr"></div>
-
-					<span class="pull-left">
-						<b>Surface :</b>
-						{{biens[r3].surface}}</span>
-					<span class="proerty-price pull-right">
-						<b>Prix :</b>
-						{{biens[r3].prix}}</span>
-				</div>
-			</div>
-		</div>
-		<div class="box-tree more-proerty text-center col-sm-6 col-md-12 p0 ">
-			<div class="item-tree-icon">
-				<i class="fa fa-th"></i>
-			</div>
-			<div class="more-entry overflow">
-				<h5>
-					<a href="property-1.html">A propos
-					</a>
-				</h5>
-				<h5 class="tree-sub-ttl"></h5>
-				<button class="btn border-btn more-black" value="All properties">All properties</button>
-			</div>
-		</div>
-
-
 	</div>
-</div></div></div>{% endblock %}
+</div></div>{% endblock %}

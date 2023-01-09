@@ -1,84 +1,109 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ContactsController!{% endblock %}
+{% block title %}Hello ContactsController!
+{% endblock %}
 
 {% block body %}
-    <div class="content-area recent-property padding-top-40  pt-5" style="background-color: #FFF;">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2">
-                    <div class="" id="contact1">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <h3><i class="fa fa-map-marker"></i> Adresse</h3>
-                                <p>263 Av. Général Leclerc Bâtiment 12 D
-                                    <br>Rennes
-                                    <br>35042
-                                    <br>
-                                    <strong>Rennes</strong>
-                                </p>
-                            </div>
-                            <!-- /.col-sm-4 -->
-                            <div class="col-sm-6">
-                                <h3><i class="fa fa-phone"></i> Centre d'apelle</h3>
-                                <p><strong>02 23 23 39 00</strong></p>
-                            </div>
-                            <!-- /.col-sm-4 -->
-                            <div class="col-sm-6">
-                                <h3><i class="fa fa-envelope"></i> Support informatique</h3>
-                                <p class="text-muted">Utiliser notre système de ticket en cas de problème</p>
-                                <ul>
-                                    <li><strong><a href="mailto:">safer@companie.com</a></strong>   </li>
-                                </ul>
-                            </div>
-                            <!-- /.col-sm-4 -->
-                        </div>
-                        <!-- /.row -->
-                        <hr>
+	<div class="content-area recent-property padding-top-40  pt-5" style="background-color: #FFF;">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2">
+					<div class="" id="contact1">
+						<div class="row">
+							<div class="col-sm-6">
+								<h3>
+									<i class="fa fa-map-marker"></i>
+									Adresse</h3>
+								<p>
+									<strong>Safer Bretagne</strong>
+									4 ter rue Luzel
+									<br>Saint Brieuc Cedex
+									<br>22015
+									<br>
+									<strong>Saint Brieux</strong>
+								</p>
+							</div>
+							<!-- /.col-sm-4 -->
+							<div class="col-sm-6">
+								<h3>
+									<i class="fa fa-phone"></i>
+									Nous joindres</h3>
+								<p>
+									<strong>
+										<ul>
+											<li>Tél. : 02 96 94 05 95
+											</li>
+											<li>Fax : 02 96 78 95 07
+											</li>
+										</ul>
 
-                        <hr>
-                        <h2>Contacter</h2>
-                        <form>
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <label for="firstname">Nom</label>
-                                        <input type="text" class="form-control" id="firstname">
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <label for="lastname">Prenom</label>
-                                        <input type="text" class="form-control" id="lastname">
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <label for="email">Email</label>
-                                        <input type="text" class="form-control" id="email">
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <label for="subject">Sujet</label>
-                                        <input type="text" class="form-control" id="subject">
-                                    </div>
-                                </div>
-                                <div class="col-sm-12">
-                                    <div class="form-group">
-                                        <label for="message">Message</label>
-                                        <textarea id="message" class="form-control"></textarea>
-                                    </div>
-                                </div>
-                                <div class="col-sm-12 text-center">
-                                    <button type="submit" class="btn btn-primary"><i class="fa fa-envelope-o"></i> Envoyer le message</button>
-                                </div>
-                            </div>
-                            <!-- /.row -->
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+									</strong>
+								</p>
+							</div>
+							<!-- /.col-sm-4 -->
+							<div class="col-sm-6">
+								<h3>
+									<i class="fa fa-envelope"></i>
+									Support informatique</h3>
+								<p class="text-muted">Utiliser notre système de ticket en cas de problème</p>
+								<ul>
+									<li>
+										<strong>
+											<a href="mailto:">safer@companie.com</a>
+										</strong>
+									</li>
+								</ul>
+							</div>
+							<!-- /.col-sm-4 -->
+						</div>
+						<!-- /.row -->
+						<hr>
+
+						<hr>
+						<h2>Contacter</h2>
+						<form>
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="form-group">
+										<label for="firstname">Nom</label>
+										<input type="text" class="form-control" id="firstname">
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="form-group">
+										<label for="lastname">Prenom</label>
+										<input type="text" class="form-control" id="lastname">
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="form-group">
+										<label for="email">Email</label>
+										<input type="text" class="form-control" id="email">
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="form-group">
+										<label for="subject">Sujet</label>
+										<input type="text" class="form-control" id="subject">
+									</div>
+								</div>
+								<div class="col-sm-12">
+									<div class="form-group">
+										<label for="message">Message</label>
+										<textarea id="message" class="form-control"></textarea>
+									</div>
+								</div>
+								<div class="col-sm-12 text-center">
+									<button type="submit" class="btn btn-primary">
+										<i class="fa fa-envelope-o"></i>
+										Envoyer le message</button>
+								</div>
+							</div>
+							<!-- /.row -->
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 {% endblock %}

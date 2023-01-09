@@ -216,3 +216,14 @@ nav {
 }
 
 
+table, td {
+
+    border: 2px ;
+    border-collapse: collapse;
+
+}
+td {
+
+    padding: 8px;
+
+}

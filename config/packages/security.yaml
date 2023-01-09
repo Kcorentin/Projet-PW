@@ -31,6 +31,12 @@ security:
 
     # Easy way to control access for large sections of your site
     # Note: Only the *first* access control that matches will be used
+
+    # Nous avons créer 4 rôles en cascade ainsi par exemple le Role user celui de l'utilisateur ne disposant d'aucun droit admin
+    # le Role biens admin qui ne peux que modifié les différents biens, en ajouté mais aussi en supprimer
+    # Et bien admin dispose aussi des mêmes droits que le role user
+    # les autres role admin fonctionne sur le même principe
+
     access_control:
         - { path: ^/admin/utilisateurs/admin, roles: ROLE_SUPER_ADMIN }
         - { path: ^/admin/utilisateurs, roles: ROLE_ADMIN }
@@ -53,3 +59,6 @@ when@test:
                 cost: 4 # Lowest possible value for bcrypt
                 time_cost: 3 # Lowest possible value for argon
                 memory_cost: 10 # Lowest possible value for argon
+
+    # les mots de passes sont hasher dans la base de donner pour ne pas pouvoir connaître les mot de passe des utilisateurs
+    # ou celui des autres administrateurs
