@@ -1,0 +1,16 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Administration des utilisateurs{% endblock %}
+
+{% block body %}
+    <main class="container">
+        <section class="row">
+            <div class="col-12">
+                <h1>Supprimer un utilisateurs</h1>
+                <h2>Voici le bien que vous voulez supprimer : </h2>
+                {% include "admin/utilisateurs/_form.html.twig" with {'button_label': 'Supprimer'} %}
+                <a href="{{ path('admin_utilisateurs_index') }}" class="btn btn-danger">Annuler</a>
+            </div>
+        </section>
+    </main>
+{% endblock %}

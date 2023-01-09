@@ -1,8 +1,48 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Administration des utilisateurs {% endblock %}
+{% block title %}Administration des Utilisateurs
+{% endblock %}
 
 {% block body %}
-<h1>Administration des utilisateurs 
-</h1>
+	<h1>Administration des utilisateurs
+	</h1>
+	<center>
+		<a href="{{ path('admin_utilisateurs_ajout')}}" class="btn btn-success ">
+			Ajouter un nouvel utilisateurs</a>
+	</center>
+	<table class="container">
+		<tr>
+			<th class="col-1 mx-2">email</th>
+			<th class="col-1 mx-2">roles</th>
+			<th class="col-1 mx-2">mot de passe</th>
+			<th class="col-1 mx-2">nom</th>
+			<th class="col-1 mx-2">prenom</th>
+			<th class="col-1 mx-2">login</th>
+			<th class="col-1 mx-2">modifier</th>
+			<th class="col-1 mx-2">supprimer</th>
+
+		</tr>
+		<tbody class="row border border-dark">
+
+			{% for user in users %}
+				<tr>
+
+					<td class="col-1 brd">{{user.email}}</td>
+					<td class="col-1 brd">{{user.roles[0]}}</td>
+					<td class="col-1 border border-dark">{{user.password}}</td>
+					<td class="col-1 border border-dark">{{user.nom}}</td>
+					<td class="col-1 border border-dark">{{user.prenom}}</td>
+					<td class="col-1 border border-dark">{{user.login}}</td>
+					
+					<td class="col-1 border border-dark">
+						<a href="{{ path('admin_utilisateurs_modifier', {"id": user.id }) }}">Modifier</a>
+					</td>
+					<td class="col-1 border border-dark">
+						<a href="{{ path('admin_utilisateurs_supprimer', {"id": user.id }) }}">Supprimer</a>
+					</td>
+				</tr>
+			{% endfor %}
+
+		</tbody>
+	</table>
 {% endblock %}

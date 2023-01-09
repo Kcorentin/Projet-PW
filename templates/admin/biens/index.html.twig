@@ -1,10 +1,49 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Administration des biens {% endblock %}
+{% block title %}Administration des biens
+{% endblock %}
 
 {% block body %}
-<h1>Administration des biens
-</h1>
- <center> <a href="{{ path('admin_biens_ajout')}}" class="btn btn-success " > Ajouter un nouveau bien</a></center>
- 
+	<h1>Administration des biens
+	</h1>
+	<center>
+		<a href="{{ path('admin_biens_ajout')}}" class="btn btn-success ">
+			Ajouter un nouveau bien</a>
+	</center>
+	<table class="container">
+		<tr>
+			<th class="col-1 mx-2">titre</th>
+			<th class="col-1 mx-2">surface</th>
+			<th class="col-1 mx-2">prix</th>
+			<th class="col-1 mx-2">ville</th>
+			<th class="col-1 mx-2">CodePostal</th>
+			<th class="col-1 mx-2">Description</th>
+			<th class="col-1 mx-2">type</th>
+			<th class="col-1 mx-2">modifier</th>
+			<th class="col-1 mx-2">supprimer</th>
+
+		</tr>
+		<tbody class="row border border-dark">
+
+			{% for bien in biens %}
+				<tr>
+
+					<td class="col-1 brd">{{bien.titre}}</td>
+					<td class="col-1 brd">{{bien.surface}}</td>
+					<td class="col-1 border border-dark">{{bien.prix}}</td>
+					<td class="col-1 border border-dark">{{bien.ville}}</td>
+					<td class="col-1 border border-dark">{{bien.codepostal}}</td>
+					<td class="col-1 border border-dark">{{bien.description}}</td>
+					<td class="col-1 border border-dark">{{bien.VentesOuLocations}}</td>
+					<td class="col-1 border border-dark">
+						<a href="{{ path('admin_biens_modifier', {"id": bien.Id }) }}">Modifier</a>
+					</td>
+					<td class="col-1 border border-dark">
+						<a href="{{ path('admin_biens_supprimer', {"id": bien.Id }) }}">Supprimer</a>
+					</td>
+				</tr>
+			{% endfor %}
+
+		</tbody>
+	</table>
 {% endblock %}

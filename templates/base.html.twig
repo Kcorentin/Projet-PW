@@ -21,11 +21,7 @@
 		/>
 		{# fichier en dehors des blocs car communs a toutes les pages  #}
 		<!-- Feuilles de styles -->
-		{% block stylesheets %}
-
-
-
-			<link rel="stylesheet" href="{{ asset('assets/css/normalize.css')}}">
+		<link rel="stylesheet" href="{{ asset('assets/css/normalize.css')}}">
 			<link rel="stylesheet" href="{{ asset('assets/css/font-awesome.min.css')}}">
 			<link rel="stylesheet" href="{{ asset('assets/css/fontello.css')}}">
 			<link rel="stylesheet" href="{{ asset('assets/css/animate.min.css')}}" media="screen">
@@ -40,6 +36,10 @@
 			<link rel="stylesheet" href="{{ asset('assets/css/responsive.css')}}">
 
 			<link rel="stylesheet" href="{{asset('assets/css/styles.css')}}">
+		{% block stylesheets %}
+
+
+
 
 		{% endblock %}
 
@@ -73,6 +73,9 @@
 		<script src="{{asset('assets/js/gmaps.min.js')}}" defer></script>
 
 
+		<script src="{{asset('assets/js/gmaps.js')}}" defer></script>
+
+		
 		<script src="{{asset('assets/js/icheck.min.js')}}" defer></script>
 
 
@@ -80,7 +83,7 @@
 
 
 		<script src="{{asset('assets/js/jquery.bootstrap.wizard.js')}}" defer></script>
-
+	
 
 		<script src="{{asset('assets/js/jquery.slitslider.js')}}" defer></script>
 

@@ -8,6 +8,7 @@
             <div class="col-12">
                 <h1>Modifier un biens</h1>
                 {% include "admin/biens/_form.html.twig" with {'button_label': 'Modifier'} %}
+                 <a href="{{ path('admin_biens_index') }}" class="btn btn-danger">Annuler</a>
             </div>
         </section>
     </main>
