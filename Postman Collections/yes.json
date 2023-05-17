@@ -13,7 +13,8 @@
 			},
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": "https://api.github.com/users/Kcorentin/Projet-PW"
 			},
 			"response": []
 		}
